@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, Typography,Link } from '@mui/material';
+import { Box, Typography, Link } from '@mui/material';
 import SmpLogo from './assets/marketplace-64.png'; 
-import yectraLogo from './assets/image.png' 
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import CompanyLogo from './assets/Graphic1.png'; // Add the path to your company logo
 
 const App = () => {
   return (
-   
     <Box 
       sx={{ 
         display: 'flex', 
@@ -16,17 +17,20 @@ const App = () => {
         textAlign: 'center',
       }}
     >
-      <Box sx={{m:4}} >
+      <Box sx={{ mt: 6, mb: 4, textAlign: 'center' }}>
         <a href="https://orange-pebble-0ad7e9f1e.5.azurestaticapps.net/" target="_blank" rel="noopener noreferrer">
           <img src={SmpLogo} className="logo" alt="SMP logo" />
         </a>
-        <Typography variant="h3">Software Marketplace</Typography>
+        <Typography variant="h3">
+    
+            Software Marketplace
+        </Typography>
       </Box>
       <Box>
         Edit <code>src/App.jsx</code> and save to test 
         <Typography variant="subtitle2">
-        Click on the SMP logo to visit the marketplace
-      </Typography>
+          Click on the SMP logo to visit the marketplace
+        </Typography>
       </Box>
       <Box 
         component="footer"
@@ -37,22 +41,25 @@ const App = () => {
           textAlign: 'center'
         }}
       >
+      
+        <img src={CompanyLogo} alt="Company logo" style={{ height: '20px', verticalAlign: 'middle' }} />
         <Typography variant="body2">
-        Yectra technologies
+          Yectra Technologies
         </Typography>
-       
-        <Typography variant="body2">
-         Coimbatore,Tamil Nadu
+        <Typography variant="body2" sx={{m:0.5}}>
+          Coimbatore, Tamil Nadu
         </Typography>
-        <Typography variant="body2">
-          Follow us on:
+        <Typography variant="body2" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           {' '}
-          <Link href="https://www.instagram.com/yectra_technologies/" target="_blank" rel="noopener noreferrer">Instagram</Link>
-          {' | '}
-          <Link href="https://in.linkedin.com/company/yectra" target="_blank" rel="noopener noreferrer">LinkedIn</Link>
+          <Link href="https://www.instagram.com/yectra_technologies/" target="_blank" rel="noopener noreferrer" sx={{ mx: 1 }}>
+            <InstagramIcon />
+          </Link>
+          {' '}
+          <Link href="https://in.linkedin.com/company/yectra" target="_blank" rel="noopener noreferrer" sx={{ mx: 1 }}>
+            <LinkedInIcon />
+          </Link>
         </Typography>
       </Box>
-      
     </Box>
   );
 }
