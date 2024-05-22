@@ -3,7 +3,7 @@ import { Box, Typography, Link } from '@mui/material';
 import SmpLogo from './assets/marketplace-64.png'; 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import CompanyLogo from './assets/Graphic1.png'; // Add the path to your company logo
+import CompanyLogo from './assets/Graphic1.png'; 
 
 const App = () => {
   return (
